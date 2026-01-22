@@ -20,5 +20,13 @@ variable "gcs_bucket" {
 }
 
 variable "days_threshold" {
-  default = "0"
+  default = "-1"
+}
+
+variable "scheduler_cron" {
+  default = "*/5 * * * *"
+}
+
+variable "scheduler_timezone" {
+  default = "Asia/Kolkata"
 }
