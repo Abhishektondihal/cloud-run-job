@@ -11,3 +11,5 @@ steps:
 images:
 - 'us-central1-docker.pkg.dev/true-etching-426207-p8/cloud-run-jobs/snapshot-cleanup:latest'
 
+options:
+  logging: CLOUD_LOGGING_ONLY
