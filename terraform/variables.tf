@@ -6,7 +6,7 @@ variable "image" {
   type = string
 }
 
-variable "project_ids" {
+variable "project_id" {
   description = "Comma separated project IDs"
   type        = string
 }

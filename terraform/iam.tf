@@ -1,3 +1,7 @@
+data "google_project" "current" {
+  project_id = var.project_id
+}
+
 resource "google_service_account" "snapshot_sa" {
   account_id   = "snapshot-cleanup-sa"
   display_name = "Snapshot Cleanup Cloud Run Job SA"
@@ -30,4 +34,10 @@ resource "google_project_iam_member" "scheduler_invoker" {
   project = var.project_id
   role    = "roles/run.invoker"
   member  = "serviceAccount:${google_service_account.scheduler_sa.email}"
+}
+
+resource "google_project_iam_member" "cloudbuild_artifact_writer" {
+  project = var.project_id
+  role    = "roles/artifactregistry.writer"
+  member  = "serviceAccount:${data.google_project.current.number}@cloudbuild.gserviceaccount.com"
 }

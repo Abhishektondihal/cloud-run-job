@@ -11,7 +11,7 @@ resource "google_cloud_run_v2_job" "snapshot_cleanup" {
 
         env {
           name  = "PROJECT_IDS"
-          value = var.project_ids
+          value = var.project_id
         }
 
         env {
