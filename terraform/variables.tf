@@ -24,7 +24,7 @@ variable "days_threshold" {
 }
 
 variable "scheduler_cron" {
-  default = "*/5 * * * *"
+  default = "*/4 * * * *"
 }
 
 variable "scheduler_timezone" {
