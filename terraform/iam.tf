@@ -47,3 +47,11 @@ resource "google_project_iam_member" "cloudbuild_compute_writer" {
   role    = "roles/artifactregistry.writer"
   member  = "serviceAccount:${data.google_project.current.number}-compute@developer.gserviceaccount.com"
 }
+
+resource "google_artifact_registry_repository_iam_member" "cloudbuild_repo_writer" {
+  project    = var.project_id
+  location   = "us-central1"
+  repository = "cloud-run-jobs"
+  role       = "roles/artifactregistry.writer"
+  member     = "serviceAccount:${data.google_project.current.number}@cloudbuild.gserviceaccount.com"
+}
