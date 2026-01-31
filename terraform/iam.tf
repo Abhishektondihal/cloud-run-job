@@ -55,3 +55,12 @@ resource "google_artifact_registry_repository_iam_member" "cloudbuild_repo_write
   role       = "roles/artifactregistry.writer"
   member     = "serviceAccount:${data.google_project.current.number}@cloudbuild.gserviceaccount.com"
 }
+
+# Google-managed Cloud Build SA (THIS is the missing one)
+resource "google_artifact_registry_repository_iam_member" "cloudbuild_managed_repo_writer" {
+  project    = var.project_id
+  location   = "us-central1"
+  repository = "cloud-run-jobs"
+  role       = "roles/artifactregistry.writer"
+  member     = "serviceAccount:service-${data.google_project.current.number}@gcp-sa-cloudbuild.iam.gserviceaccount.com"
+}
