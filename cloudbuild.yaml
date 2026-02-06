@@ -1,13 +1,15 @@
 steps:
-- name: 'gcr.io/cloud-builders/docker'
+- name: gcr.io/cloud-builders/docker
   args:
     [
-      'build',
-      '-t',
-      'us-central1-docker.pkg.dev/true-etching-426207-p8/cloud-run-jobs/snapshot-cleanup:latest',
-      './docker'
+      "build",
+      "-t",
+      "us-central1-docker.pkg.dev/PROJECT_ID/cloud-run-jobs/snapshot-cleanup:latest",
+      "./docker"
     ]
 
 images:
-- 'us-central1-docker.pkg.dev/true-etching-426207-p8/cloud-run-jobs/snapshot-cleanup:latest'
+- "us-central1-docker.pkg.dev/PROJECT_ID/cloud-run-jobs/snapshot-cleanup:latest"
 
+options:
+  logging: CLOUD_LOGGING_ONLY

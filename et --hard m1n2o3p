@@ -1,0 +1,14 @@
+[33ma90af20[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m Adding artifact-registry file
+[33m8da8abd[m Adding artifact-registry reader role
+[33mca6d3e1[m Merge pull request #1 from Abhishektondihal/Optimizing-code
+[33m365e684[m Optimizing code and removing unused variables
+[33m16d54bc[m Adding Google-managed Cloud Build SA
+[33m002859d[m Adding the cloudbuild_artifact_writer role
+[33mdf4d111[m Adding the cloudbuild_artifact_writer role
+[33m16ba949[m Adding the cloudbuild_artifact_writer role
+[33m9e78ae0[m Updating the code to make it github triggered cloud build testing
+[33m06d2e2e[m Updating the code to make it github triggered cloud build testing
+[33m20b557c[m Updating the code to make it github triggered cloud build testing
+[33me4724a1[m First success
+[33mc63b496[m Pushing the source files
+[33m3eafeb2[m first commit
