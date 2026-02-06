@@ -1,5 +1,6 @@
 variable "project_id" {
   type = string
+  default = "true-etching-426207-p8"
 }
 
 variable "region" {

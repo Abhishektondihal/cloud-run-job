@@ -4,12 +4,12 @@ steps:
     [
       "build",
       "-t",
-      "us-central1-docker.pkg.dev/PROJECT_ID/cloud-run-jobs/snapshot-cleanup:latest",
+      "us-central1-docker.pkg.dev/var.project_id/cloud-run-jobs/snapshot-cleanup:latest",
       "./docker"
     ]
 
 images:
-- "us-central1-docker.pkg.dev/PROJECT_ID/cloud-run-jobs/snapshot-cleanup:latest"
+- "us-central1-docker.pkg.dev/var.project_id/cloud-run-jobs/snapshot-cleanup:latest"
 
 options:
   logging: CLOUD_LOGGING_ONLY
